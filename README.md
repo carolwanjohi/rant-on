@@ -21,7 +21,7 @@ As a user I would like to:
 | Display log in | N/A | Display link for loggin in with Google |
 | Create a user account | **Click** log in with Google button <br> Display Google log in form | Create a user account with a user profile and direct user to their profile |
 | Update profile | **Click** update profile | Direct the user to a page with a form where the user can update their profile and submit the form |
-| Create a rant | **Click** create file icon  | Direct user to a page with a form where the user can create a rant and sumit the form |
+| Create a rant | **Click** create icon  | Direct user to a page with a form where the user can create a rant and sumit the form |
 | Display other user's rants | **Click** explore icon  | Direct user a page with a list of rants from other users |
 | React to a rant with an emoji | **Click** an emoji | Hide he other emojis and only display the emoji selected  by the current user |
 
