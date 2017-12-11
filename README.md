@@ -1,6 +1,4 @@
 # Rant On
-## This is a web application that allows users to log in using their Google accounts to go on and on about any topic., 11/12/2017
-
 
 ## By **[Carol Wanjohi](https://github.com/carolwanjohi)**
 
