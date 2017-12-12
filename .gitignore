@@ -5,6 +5,7 @@ confusables.json
 categories.json
 db.sqlite3
 .env
+virtual/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
