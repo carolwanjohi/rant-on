@@ -1,0 +1,234 @@
+/*Style the navbar*/
+div.container {
+    margin-top: 0.75em;
+}
+
+.navbar{
+    background-color: #fff;
+    border-color: #fff;
+    border-bottom-color: #000;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color: #000;
+}
+
+img.img-responsive.siteIcon {
+    margin-top: -13%; 
+    height: 15vh;
+}
+
+div.container-fluid > div.navbar-header > a.navbar-brand.siteName {
+    font-size: 2.5em;
+    color: #000;
+    padding-left: 0.75em;
+    margin-top: 2.5%;
+    margin-left: 1.5em;
+}
+
+ul.nav.navbar-nav.navbar-center, ul.nav.navbar-nav.navbar-right {
+    margin-top: -0.25%;
+}
+
+.userIcon, .signOut, .exploreIcon {
+    font-size: 3em;
+    color: #000;
+}
+
+
+i.fa.fa-compass {
+    margin-right: 1em;
+    margin-left: 6em;
+}
+
+i.glyphicon.glyphicon-user {
+    margin-right: 2.75em;
+}
+
+.signOut {
+    margin-left: 1em;
+}
+
+i.fa.fa-sign-out {
+    margin-right: 1em;
+}
+
+
+a.navbar-brand.siteName {
+    color: #000;
+}
+
+a.navbar-brand.siteIcon:hover, a.navbar-brand.siteName:hover, a.signOut:hover, a.exploreIcon:hover{
+    color: #000;
+    text-decoration: none;
+}
+
+
+@media only screen and (min-device-width: 0px) and (max-device-width: 321px)  { 
+
+    .navbar-inverse .navbar-toggle {
+        background-color: #000;
+    }
+
+    img.img-responsive.siteIcon {
+        margin-top: -15%; 
+        height: 10vh;
+    }   
+
+    a.navbar-brand.siteName {
+        display: none;
+    }
+
+    i.fa.fa-compass {
+        margin-left: 0em;
+    }
+
+    i.fa.fa-sign-out {
+        margin-left: -17%;
+        margin-top: 0.25em;
+    }
+
+}
+
+@media only screen and (min-device-width: 322px) and (max-device-width: 378px)  { 
+
+    .navbar-inverse .navbar-toggle {
+        background-color: #000;
+    }
+
+    img.img-responsive.siteIcon {
+        margin-top: -15%; 
+        height: 10vh;
+    }   
+
+    a.navbar-brand.siteName {
+        display: none;
+    }
+
+    i.fa.fa-compass {
+        margin-left: 0em;
+    }
+
+    i.fa.fa-sign-out {
+        margin-left: -13%;
+        margin-top: 0.25em;
+    }
+
+}
+
+@media only screen and (min-device-width: 379px) and (max-device-width: 426px)  { 
+
+    .navbar-inverse .navbar-toggle {
+        background-color: #000;
+    }
+
+    img.img-responsive.siteIcon {
+        margin-top: -15%; 
+        height: 10vh;
+    }   
+
+    a.navbar-brand.siteName {
+        display: none;
+    }
+
+    i.fa.fa-compass {
+        margin-left: 0em;
+    }
+
+    i.fa.fa-sign-out {
+        margin-left: -12%;
+        margin-top: 0.25em;
+    }
+
+}
+
+@media only screen and (min-device-width: 427px) and (max-device-width: 770px)  { 
+
+    img.img-responsive.siteIcon {
+        margin-top: -13%; 
+        height: 12vh;
+    }  
+
+    div.container-fluid > div.navbar-header > a.navbar-brand.siteName {
+        margin-left: 0.5em;
+    }
+
+    ul.nav.navbar-nav.navbar-center, ul.nav.navbar-nav.navbar-right {
+        margin-top: -1.5%;
+    }
+
+    i.fa.fa-compass {
+        margin-left: 1.5em;
+    }
+
+    i.glyphicon.glyphicon-user {
+        margin-right: 0.75em;
+    }
+
+}
+
+@media only screen and (min-device-width: 771px) and (max-device-width: 1025px)  { 
+
+    img.img-responsive.siteIcon {
+        margin-top: -13%; 
+        height: 12vh;
+    }  
+
+    div.container-fluid > div.navbar-header > a.navbar-brand.siteName {
+        margin-left: 0.5em;
+    }
+
+    ul.nav.navbar-nav.navbar-center, ul.nav.navbar-nav.navbar-right {
+        margin-top: -1.05%;
+    }
+
+    i.fa.fa-compass {
+        margin-left: 3.5em;
+    }
+
+    i.glyphicon.glyphicon-user {
+        margin-right: 2.75em;
+    }
+
+    i.fa.fa-sign-out {
+        margin-right: 0.5em;
+    }
+}
+
+
+@media only screen and (min-device-width: 1441px) { 
+
+    nav.navbar.navbar-inverse {
+        height: 20vh;
+    }
+
+    img.img-responsive.siteIcon {
+        margin-top: -5%; 
+        height: 18vh;
+    }  
+
+    div.container-fluid > div.navbar-header > a.navbar-brand.siteName {
+        /*margin-left: 0.5em;*/
+        margin-top: 10%;
+        font-size: 5em;
+    }
+
+    ul.nav.navbar-nav.navbar-center, ul.nav.navbar-nav.navbar-right {
+        margin-top: 1.5%;
+        font-size: 2em;
+    }
+
+    i.fa.fa-compass {
+        margin-left: 4.75em;
+    } 
+
+    i.glyphicon.glyphicon-user {
+        margin-right: 3.75em;
+    }
+
+    i.fa.fa-sign-out {
+        margin-right: 1.5em;
+    }
+}
+
+

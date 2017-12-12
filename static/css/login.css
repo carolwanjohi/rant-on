@@ -1,0 +1,176 @@
+/*Style the login template*/
+@media only screen and (min-device-width: 0px) and (max-device-width: 376px)  { 
+
+    div.panel.panel-default {
+        margin-top: 0.5em;
+        width: 100%;
+    }
+
+    div.panel-body {
+        height: 90vh;
+        text-align: left;
+    }
+
+    h1.welcome {
+        margin-top: 1em;
+        margin-bottom: 1.75em;
+        font-size: 1.85em;
+    }
+
+    h2.signIn {
+        margin-top: 1em;
+        font-size: 1.65em;
+    }
+
+    img#signInButton {
+        margin-top: 2em;
+        width: 77vw;
+        margin-left: -3%;
+    }
+
+}
+
+@media only screen and (min-device-width: 377px) and (max-device-width: 426px)  { 
+
+    div.panel.panel-default {
+        margin-top: 0.5em;
+        width: 100%;
+    }
+
+    div.panel-body {
+        height: 90vh;
+        text-align: left;
+    }
+
+    h1.welcome {
+        margin-top: 1em;
+        margin-bottom: 1.75em;
+        font-size: 1.85em;
+    }
+
+    h2.signIn {
+        margin-top: 1em;
+        font-size: 1.65em;
+    }
+
+    img#signInButton {
+        margin-top: 2em;
+        width: 77vw;
+        margin-left: -3%;
+    }
+}
+
+@media only screen and (min-device-width: 427px) and (max-device-width: 770px)  { 
+
+    div.panel.panel-default {
+        margin-top: 0.5em;
+        width: 100%;
+    }
+
+    div.panel-body {
+        text-align: center;
+        height: 93vh;
+    }
+
+    h1.welcome {
+        margin-top: 1.5em;
+        margin-bottom: 1.5em;
+    }
+
+    h2.signIn {
+        margin-top: 1.5em;
+        margin-left: -33%;
+    }
+
+    img#signInButton {
+        margin-top: 2.5em;
+        margin-left: 5%;
+    }
+
+}
+
+@media only screen and (min-device-width: 771px) and (max-device-width: 1025px)  { 
+
+    div.panel.panel-default {
+        margin-top: 0.5em;
+        width: 100%;
+    }
+
+    div.panel-body {
+        text-align: center;
+        height: 93vh;
+    }
+
+    h1.welcome {
+        margin-top: 1.5em;
+        margin-bottom: 1.5em;
+    }
+
+    h2.signIn {
+        margin-top: 1.5em;
+        margin-left: -26%;
+    }
+
+    img#signInButton {
+        margin-top: 2.5em;
+        margin-left: 3%;
+    }
+
+}
+
+@media only screen and (min-device-width: 1026px) and (max-device-width: 1441px)  { 
+
+    div.panel.panel-default {
+        margin-top: 0em;
+        width: 100%;
+    }
+
+    div.panel-body {
+        text-align: center;
+        height: 90vh;
+    }
+
+    h1.welcome {
+        margin-top: 1.5em;
+        margin-bottom: 1.5em;
+    }
+
+    h2.signIn {
+        margin-top: 1.5em;
+        margin-left: -21%;
+    }
+
+    img#signInButton {
+        margin-top: 2.5em;
+        margin-left: 3%;
+    }
+}
+
+@media only screen and (min-device-width: 1442px) { 
+
+    div.panel.panel-default {
+        margin-top: 10em;
+        width: 30vw;
+    }
+
+    div.panel-body {
+        text-align: center;
+        height: 70vh;
+    }
+
+    h1.welcome {
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+
+    h2.signIn {
+        margin-top: 2em;
+        margin-left: -20%;
+    }
+
+    img#signInButton {
+        margin-top: 3em;
+        margin-left: 3%;
+    }
+
+}

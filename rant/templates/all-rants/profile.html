@@ -1,0 +1,22 @@
+{% extends 'all-rants/base.html' %}
+{% load staticfiles%}
+
+<!-- Styles block -->
+{% block styles %}
+
+    {{block.super}}
+    <link rel="stylesheet" href="{% static 'css/profile.css'%}">
+
+{% endblock %}
+
+<!-- Content block -->
+{% block content %}
+
+    {{block.super}}
+
+    <div class="container">
+        <h1>
+            {{user.username}}'s Profile
+        </h1>
+    </div>
+{% endblock %}
