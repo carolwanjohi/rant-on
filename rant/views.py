@@ -6,8 +6,8 @@ from django.contrib.auth import logout
 from django.db import transaction
 from django.contrib import messages
 from django.core.exceptions import ObjectDoesNotExist
-from .models import Profile
-from .forms import UserForm, ProfileForm
+from .models import Profile, Rant
+from .forms import UserForm, ProfileForm, RantForm
 
 # Create your views here.
 def index(request):
@@ -37,7 +37,9 @@ def profile(request):
 
         profile = Profile.get_single_profile(current_user.id)
 
-        return render(request, 'all-rants/profile.html', {"title":title, "current_user":current_user, "profile":profile})
+        rants = Rant.get_user_rants(current_user.id)
+
+        return render(request, 'all-rants/profile.html', {"title":title, "current_user":current_user, "profile":profile, "rants":rants})
 
     except ObjectDoesNotExist:
 
@@ -46,7 +48,7 @@ def profile(request):
 
 @login_required
 @transaction.atomic
-def update_profile(request, user_id):
+def update_profile(request):
     '''
     View function to display a form for updating profile information
     '''
@@ -56,7 +58,7 @@ def update_profile(request, user_id):
 
         current_profile = current_user.profile
 
-        title = f'Update {current_user.username}\'s Profile'
+        title = 'Update Profile'
 
         if request.method == 'POST':
 
@@ -83,6 +85,47 @@ def update_profile(request, user_id):
             profile_form = ProfileForm(instance=current_profile)
 
             return render(request, 'all-rants/update-profile.html', {"title":title, "user_form": user_form, "profile_form":profile_form})
+
+    except ObjectDoesNotExist:
+
+        return redirect(index)
+
+@login_required
+def create_rant(request):
+    '''
+    View function to display a form for a user to create a rant 
+    '''
+    try:
+
+        current_user = request.user
+
+        title = 'Create Rant'
+
+        current_profile = current_user.profile
+
+        if request.method == 'POST':
+
+            create_rant_form = RantForm(request.POST)
+
+            if create_rant_form.is_valid:
+
+                create_rant = create_rant_form.save(commit=False)
+
+                create_rant.author = current_profile
+
+                create_rant.save()
+
+                return redirect(profile)
+
+            else:
+
+                messages.error(request, ('Please correct the error below.'))
+
+        else:
+
+            create_rant_form = RantForm()
+
+            return render(request, 'all-rants/create-rant.html', {"title":title, "create_rant_form":create_rant_form})
 
     except ObjectDoesNotExist:
 

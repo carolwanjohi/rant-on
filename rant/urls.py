@@ -10,7 +10,9 @@ urlpatterns = [
 
     url(r'^account/logout/', views.Logout, name="logout"),
 
-    url(r'^update/profile/(\d+)', views.update_profile, name="updateProfile"),
+    url(r'^update/profile/', views.update_profile, name="updateProfile"),
+
+    url(r'^create/rant', views.create_rant, name="createRant"),
 ]
 
 if settings.DEBUG:

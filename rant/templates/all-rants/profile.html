@@ -42,7 +42,7 @@
                 <br>
 
                 <h5>
-                   <a href="{% url 'updateProfile' current_user.id%}" class="updateProfile">
+                   <a href="{% url 'updateProfile'%}" class="updateProfile">
                         Update Profile
                     </a> 
                 </h5>
@@ -50,7 +50,7 @@
                 <br>
 
                 <h5>
-                    <a href="" class="createRant">
+                    <a href="{% url 'createRant'%}" class="createRant">
                         Create Rant <i class="fa fa-plus-square-o" aria-hidden="true"></i>
                     </a>
                 </h5>
@@ -65,19 +65,62 @@
 
             <!-- Update -->
             <div class="col-xs-6">
-                <a href="">
+                <a href="{% url 'updateProfile'%}">
                     Update Profile
                 </a>
             </div>    
 
             <!-- Create rant -->
             <div class="col-xs-6">
-                <a href="">
+                <a href="{% url 'createRant'%}">
                     Create Rant <i class="fa fa-plus-square-o" aria-hidden="true"></i>
                 </a>
             </div> 
 
         </div>
+
+        {% if rants %}
+
+            <div class="row rantRow">
+                
+                {% for rant in rants %}
+
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 rantPanel">
+
+                        <div class="panel panel-default">
+
+                            <!-- Rant  -->
+                            <div class="panel-body">
+                                <h6 class="timeSince">
+                                    {{rant.pub_date|timesince}} ago
+                                </h6>
+
+                                <h3 class="rantTitle">
+                                    {{rant.rant_title}}
+                                </h3>
+
+                                <br>
+
+                                <article class="rantContent">
+                                    {{rant.rant_content|truncatewords:15}}
+                                </article>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                {% endfor %}
+
+            </div>
+
+
+        {% else %}
+
+            <h2>Begin ranting to your heart's content</h2>
+
+        {% endif %}
         
     </div>
 {% endblock %}

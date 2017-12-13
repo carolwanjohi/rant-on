@@ -22,4 +22,17 @@
     div.row.phoneUpdate {
         display: none;
     }
+
+    div.panel.panel-default {
+        height: 35vh;
+    }
+
+    h6.timeSince {
+        text-align: right;
+    }
+
+    h3.rantTitle {
+        margin-top: -3%;
+    }
+
 }
