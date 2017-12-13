@@ -76,7 +76,7 @@ class Rant(models.Model):
         '''
         Display for Rant Object in Rant table
         '''
-        return self.author.username + '\'s rant'
+        return self.author.user.username + '\'s rant'
 
     class Meta:
         '''
@@ -112,17 +112,17 @@ class Rant(models.Model):
         return single_rant
 
     @classmethod
-    def get_user_rants(cls, user_id):
+    def get_user_rants(cls, profile_id):
         '''
-        Function that gets rant objects with the specified user id
+        Function that gets rant objects with the specified profile id
 
         Args:
-            user_id : the user id
+            profile_id : the profile id
 
         Returns
-            user_rants : List of Rant objects with the specified user id
+            user_rants : List of Rant objects with the specified profile id
         '''
-        user_rants = Rant.objects.filter(author=user_id)
+        user_rants = Rant.objects.filter(author=profile_id)
 
         return user_rants
 

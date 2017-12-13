@@ -102,7 +102,7 @@ class RantTestClass(TestCase):
         self.test_rant = Rant(author=self.jane.profile, rant_title='Muffin', rant_content='I love muffin cookie lemon drops dragée. Caramels macaroon I love. Dragée jelly beans topping.')
         self.test_rant.save()
 
-        gotten_user_rants = Rant.get_user_rants(self.jane.id)
+        gotten_user_rants = Rant.get_user_rants(self.jane.profile.id)
 
         rants = Rant.objects.all()
 
