@@ -1,0 +1,17 @@
+/*Style other rants template*/
+@media only screen and (min-device-width: 1026px) and (max-device-width: 1441px)  { 
+
+    div.panel.panel-default {
+        height: 35vh;
+    }
+
+    h6.timeSince {
+        text-align: right;
+    }
+
+    h3.rantTitle {
+        margin-top: -3%;
+    }
+
+}
+

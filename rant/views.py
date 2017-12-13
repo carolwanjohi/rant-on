@@ -37,7 +37,7 @@ def profile(request):
 
         profile = Profile.get_single_profile(current_user.id)
 
-        rants = Rant.get_user_rants(current_user.id)
+        rants = Rant.get_user_rants(current_user.profile.id)
 
         return render(request, 'all-rants/profile.html', {"title":title, "current_user":current_user, "profile":profile, "rants":rants})
 
@@ -126,6 +126,42 @@ def create_rant(request):
             create_rant_form = RantForm()
 
             return render(request, 'all-rants/create-rant.html', {"title":title, "create_rant_form":create_rant_form})
+
+    except ObjectDoesNotExist:
+
+        return redirect(index)
+
+@login_required
+def other_rants(request):
+    '''
+    View function to display rants by other users other thatn the current user
+    '''
+    try:
+        title = "Other Rants"
+
+        current_user = request.user
+
+        current_profile = current_user.profile
+
+        all_rants = Rant.get_rants()
+
+        current_user_rants = Rant.get_user_rants(current_profile.id)
+
+        others_rants = []
+
+        for rant in all_rants:
+
+            if rant in current_user_rants:
+
+                continue
+
+            elif rant not in current_user_rants:
+
+                others_rants.append(rant)
+
+                continue
+
+        return render(request, 'all-rants/other-rants.html', {"title":title, "others_rants":others_rants})
 
     except ObjectDoesNotExist:
 

@@ -1,0 +1,59 @@
+{% extends 'all-rants/base.html' %}
+{% load staticfiles%}
+
+<!-- Styles block -->
+{% block styles %}
+
+    {{block.super}}
+    <link rel="stylesheet" href="{% static 'css/other-rants.css'%}">
+
+{% endblock %}
+
+<!-- Content block -->
+{% block content %}
+
+    {{block.super}}
+
+    <div class="container-fluid">
+        {% if others_rants %}
+
+            {% for rant in others_rants %}
+
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 rantPanel">
+
+                    <div class="panel panel-default">
+
+                        <!-- Rant  -->
+                        <div class="panel-body">
+                            <h6 class="timeSince">
+                                {{rant.pub_date|timesince}} ago
+                            </h6>
+
+                            <h3 class="rantTitle">
+                                {{rant.rant_title}}
+                            </h3>
+
+                            <br>
+
+                            <article class="rantContent">
+                                {{rant.rant_content|truncatewords:15}}
+                            </article>
+
+                        </div>
+
+                    </div>
+                    
+                </div>
+
+            {% endfor %}
+
+        {% else %}
+
+            <h1 class="text-center">
+                No rants from other users
+            </h1>
+
+        {% endif %}
+    </div>
+
+{%endblock%}
