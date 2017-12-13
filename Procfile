@@ -1,0 +1,1 @@
+web: gunicorn rant_on.wsgi

@@ -7,9 +7,14 @@ div.container {
     background-color: #fff;
     border-color: #fff;
     border-bottom-color: #000;
+    height: 16vh;
 }
 
 .navbar-inverse .navbar-nav>li>a {
+    color: #000;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover {
     color: #000;
 }
 
