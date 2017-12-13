@@ -70,12 +70,19 @@ class Rant(models.Model):
 
     rant_content = models.TextField()
 
+    pub_date = models.DateTimeField(auto_now_add=True, null=True)
+
     def __str__(self):
         '''
         Display for Rant Object in Rant table
         '''
         return self.author.username + '\'s rant'
 
+    class Meta:
+        '''
+        Order travel plans with most recent at the top
+        '''
+        ordering = ['-pub_date']
 
     @classmethod
     def get_rants(cls):
