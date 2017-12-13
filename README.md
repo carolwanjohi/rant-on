@@ -70,6 +70,7 @@ DATABASES = {
 ## Technologies Used
 - Python 3.6.2
 - Django 1.11.7
+- Google Plus API
 - Bootstrap 3
 - Postgres Database
 - CSS
