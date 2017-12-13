@@ -4,7 +4,7 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 
 # Default image for a new profile
-DEFAULT = 'profile-pic/kakashi.jpg'
+DEFAULT = 'profile-pic/user2.png'
 
 # Create your models here.
 class Profile(models.Model):
@@ -13,7 +13,7 @@ class Profile(models.Model):
     '''
     user = models.OneToOneField(User, on_delete=models.CASCADE)
 
-    profile_pic = models.ImageField(upload_to="profile-pic/", blank=True)
+    profile_pic = models.ImageField(upload_to="profile-pic/", blank=True, default=DEFAULT)
 
     def __str__(self):
         '''
