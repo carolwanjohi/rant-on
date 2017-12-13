@@ -3,7 +3,7 @@
 ## By **[Carol Wanjohi](https://github.com/carolwanjohi)**
 
 ## Description
-[This]() is a web application that prompts users to first log in using their Google credentials. After logging in the user is able to update their profile information, create a rant and react to other user's rants using emojis.
+[This](https://rant-on.herokuapp.com/) is a web application that prompts users to first log in using their Google credentials. After logging in the user is able to update their profile information, create a rant and react to other user's rants using emojis.
 
 ## User Stories
 As a user I would like to:
@@ -64,7 +64,7 @@ DATABASES = {
 10. Run `./manage.py runserver` or `python3.6 manage.py runserver` to run the application
 
 ## Known Bugs
-* no authentication system or log in
+
 * update profile feature missing
 * create rant feature missing
 * seeing other user's rants missing
