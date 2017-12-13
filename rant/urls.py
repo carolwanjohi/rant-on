@@ -5,8 +5,12 @@ from . import views
 
 urlpatterns = [
     url( r'^$', views.index, name="index"),
+
     url(r'^profile/', views.profile, name="profile"),
+
     url(r'^account/logout/', views.Logout, name="logout"),
+
+    url(r'^update/profile/(\d+)', views.update_profile, name="updateProfile"),
 ]
 
 if settings.DEBUG:

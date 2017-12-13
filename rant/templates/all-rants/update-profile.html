@@ -1,0 +1,53 @@
+{% extends 'all-rants/base.html' %}
+{% load staticfiles%}
+
+<!-- Styles block -->
+{% block styles %}
+
+    {{block.super}}
+    <link rel="stylesheet" href="{% static 'css/update-profile.css'%}">
+
+{% endblock %}
+
+<!-- Content block -->
+{% block content %}
+
+    {{block.super}}
+
+    <div class="container">
+
+        <div class="panel panel-default">
+            
+            <div class="panel-body">
+                
+                <form action="" method="post" enctype="multipart/form-data">
+
+                    {% csrf_token %}
+
+                    <div class="form-group">
+
+                        {{user_form.username.label}}
+                        {{user_form.username}}
+                        {{user_form.username.errors}}
+
+                    </div>
+
+                    <div class="form-group">
+                        
+                        {{profile_form.profile_pic.label}}
+                        {{profile_form.profile_pic}}
+                        {{profile_form.profile_pic.errors}}
+
+                    </div>
+
+                    <input type="submit" class="btn btn-primary btn-md" value="Update Profile">
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+{% endblock %}

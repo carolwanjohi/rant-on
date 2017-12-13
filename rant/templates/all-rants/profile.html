@@ -15,8 +15,69 @@
     {{block.super}}
 
     <div class="container">
-        <h1>
-            {{user.username}}'s Profile
-        </h1>
+
+        <div class="row userInfo">
+
+            <!-- Profile image -->
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+
+                {% if profile.profile_pic %}
+                    <img src="{{profile.profile_pic.url}}" alt="{user.username's} profile image" class="img-responsive profilePicture">
+
+                {% else %}
+                    
+                    <img src="{%static 'images/user2.png'%}" alt="{user.username's} profile image" class="img-responsive profilePicture">
+
+                {% endif%}
+                
+            </div>
+
+            <!-- Username -->
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+
+                <h1 class="username">
+                    {{current_user.username}}'s Profile
+                </h1>
+
+                <br>
+
+                <h5>
+                   <a href="{% url 'updateProfile' current_user.id%}" class="updateProfile">
+                        Update Profile
+                    </a> 
+                </h5>
+
+                <br>
+
+                <h5>
+                    <a href="" class="createRant">
+                        Create Rant <i class="fa fa-plus-square-o" aria-hidden="true"></i>
+                    </a>
+                </h5>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+        <div class="row phoneUpdate">
+
+            <!-- Update -->
+            <div class="col-xs-6">
+                <a href="">
+                    Update Profile
+                </a>
+            </div>    
+
+            <!-- Create rant -->
+            <div class="col-xs-6">
+                <a href="">
+                    Create Rant <i class="fa fa-plus-square-o" aria-hidden="true"></i>
+                </a>
+            </div> 
+
+        </div>
+        
     </div>
 {% endblock %}
