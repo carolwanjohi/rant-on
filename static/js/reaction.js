@@ -29,6 +29,7 @@ $(document).on("click",".emoji", function(){
     $("#reactions").append("<img src="+attribute+">");
 
     var image_title = $(this).attr("title");
+    image_title = image_title.replace(/ /g,"_")
     // console.log(image_title);
     // console.log($(this).serialize());
 
