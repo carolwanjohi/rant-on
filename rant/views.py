@@ -203,7 +203,7 @@ def single_rant(request, rant_id):
 
         # print(rant_reaction_emojis)
 
-        return render(request, 'all-rants/single-rant.html', {"title":title, "rant":single_rant, "emoji_names":emoji_names,"emoji_icons":emoji_icons[0:4],"rant_reaction_emojis":rant_reaction_emojis})
+        return render(request, 'all-rants/single-rant.html', {"title":title, "rant":single_rant, "emoji_names":emoji_names,"emoji_icons":emoji_icons,"rant_reaction_emojis":rant_reaction_emojis})
 
     except ObjectDoesNotExist:
 

@@ -142,11 +142,11 @@ class Reaction(models.Model):
         '''
         return self.user_reacting.username + '\'s reactions'
 
-    class Meta:
-        '''
-        Order reactions with the most recent at the top
-        '''
-        ordering = ['-id']
+    # class Meta:
+    #     '''
+    #     Order reactions with the most recent at the top
+    #     '''
+    #     ordering = ['-id']
 
     @classmethod
     def get_rant_reactions(cls,rant_id):
