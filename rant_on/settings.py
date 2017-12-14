@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'rant.apps.RantConfig',
     'bootstrap3',
     'social_django',
+    'emoji',
 ]
 
 MIDDLEWARE = [

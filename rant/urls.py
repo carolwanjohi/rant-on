@@ -15,6 +15,7 @@ urlpatterns = [
     url(r'^create/rant', views.create_rant, name="createRant"),
 
     url(r'^other-rants/', views.other_rants, name="otherRants"),
+
 ]
 
 if settings.DEBUG:
