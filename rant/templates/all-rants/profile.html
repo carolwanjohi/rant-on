@@ -89,23 +89,27 @@
 
                         <div class="panel panel-default">
 
-                            <!-- Rant  -->
-                            <div class="panel-body">
-                                <h6 class="timeSince">
-                                    {{rant.pub_date|timesince}} ago
-                                </h6>
+                            <a href="{% url 'myRant' rant.id%}">
 
-                                <h3 class="rantTitle">
-                                    {{rant.rant_title}}
-                                </h3>
+                                <!-- Rant  -->
+                                <div class="panel-body">
+                                    <h6 class="timeSince">
+                                        {{rant.pub_date|timesince}} ago
+                                    </h6>
 
-                                <br>
+                                    <h3 class="rantTitle">
+                                        {{rant.rant_title|title}}
+                                    </h3>
 
-                                <article class="rantContent">
-                                    {{rant.rant_content|truncatewords:15}}
-                                </article>
+                                    <br>
 
-                            </div>
+                                    <article class="rantContent">
+                                        {{rant.rant_content|truncatewords:15}}
+                                    </article>
+
+                                </div>
+                                
+                            </a>
 
                         </div>
 

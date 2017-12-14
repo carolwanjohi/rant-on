@@ -21,6 +21,10 @@
             
             <!-- Empty div -->
             <div class="col-md-2 col-lg-2">
+
+                <a href="{%url 'profile'%}">
+                   <i class="glyphicon glyphicon-menu-left"></i> 
+                </a>
                 
             </div>
 
@@ -51,6 +55,7 @@
                 </div>
 
                 <div class="panel panel-default">
+
                     
                     <div class="panel-body">
                         
@@ -59,8 +64,8 @@
                         </h2>
 
                         <div id="reactions">
-
-                            {% for rant_reaction_emoji in rant_reaction_emojis %}
+                    
+                            {% for rant_reaction_emoji in current_rant_reactions %}
                                 
                                 {%autoescape off %}
 
@@ -69,47 +74,14 @@
                                 {%endautoescape%}
                             
                             {%endfor%}
+
                         </div>
 
                     </div>
 
                 </div>
 
-                <div class="emojiContainer">
-
-                    {%for emoji in emoji_icons%}
-                        
-                        {%autoescape off %}
-
-                            {{emoji|emoji_replace_html_entities}}
-
-                        {%endautoescape%}
-
-                    {%endfor%}  
-
-                </div>
-
-            </div>
-
-            <!-- Empty div -->
-            <div class="col-md-2 col-lg-2">
-                
-            </div>
-        </div>
-
-    </div>
-
-{% endblock %}
-
-
-<!-- Scripts block -->
-{% block scripts %}
-    {{block.super}}
-    <script type="text/javascript" src="{%static 'js/reaction.js'%}"></script>
-{% endblock %}
 
 
 
-
-
-
+{%endblock%}

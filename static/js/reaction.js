@@ -30,7 +30,7 @@ $(document).on("click",".emoji", function(){
 
     var image_title = $(this).attr("title");
     image_title = image_title.replace(/ /g,"_")
-    // console.log(image_title);
+    console.log(typeof(image_title));
     // console.log($(this).serialize());
 
 

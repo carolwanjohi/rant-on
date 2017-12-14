@@ -18,7 +18,9 @@ urlpatterns = [
 
     url(r'^single/rant/(\d+)', views.single_rant, name="singleRant"),
 
-    url(r'^ajax/reaction/(?P<title>[-_\w.]+)/(?P<rant_id>\d+)', views.reaction, name="reaction")
+    url(r'^ajax/reaction/(?P<title>[-_\w.]+)/(?P<rant_id>\d+)', views.reaction, name="reaction"),
+
+    url(r'^my-rant/(\d+)', views.my_rant, name="myRant"),
 
 ]
 

@@ -133,6 +133,36 @@ def create_rant(request):
         return redirect(index)
 
 @login_required
+def my_rant(request, rant_id):
+    '''
+    View function to display the current user's single rant in full with the rant's reactions
+    '''
+    try:
+
+        current_user = request.user
+
+        current_rant = Rant.get_single_rant(rant_id)
+
+        title = f'{current_rant.author.user.username}\'s Rant'
+
+        current_rant_reactions = Reaction.get_rant_reactions(rant_id)
+
+        rant_reaction_emojis = []
+
+        for current_rant_reaction in current_rant_reactions:
+
+            current_rant_reaction_icon = Emoji.replace(':'+current_rant_reaction.emoji_title+':')
+
+            rant_reaction_emojis.append(current_rant_reaction_icon)
+
+        return render(request, 'all-rants/my-rant.html', {"title":title, "rant":current_rant, "current_rant_reactions":rant_reaction_emojis})
+
+
+    except ObjectDoesNotExist:
+
+        return redirect(index)
+
+@login_required
 def other_rants(request):
     '''
     View function to display rants by other users other thatn the current user
