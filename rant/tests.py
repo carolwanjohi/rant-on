@@ -1,6 +1,6 @@
 from django.test import TestCase
 from django.contrib.auth.models import User
-from .models import Profile, Rant
+from .models import Profile, Rant, Reaction
 
 # Create your tests here.
 class ProfileTestClass(TestCase):
@@ -107,6 +107,66 @@ class RantTestClass(TestCase):
         rants = Rant.objects.all()
 
         self.assertTrue( len(gotten_user_rants) != len(rants))
+
+class ReactionTestClass(TestCase):
+    '''
+    Test case for the Reaction class
+    '''
+    def setUp(self):
+        '''
+        Method that creates an instance of Reaction class
+        '''
+        # Create instance of User class
+        self.james = User(username='Kiki')
+        self.james.save()
+
+        # Create instance of the Rant class
+        self.james_rant = Rant(author=self.james.profile ,rant_title='Cupcake', rant_content='Cupcake jelly beans chocolate cake lollipop candy powder tootsie roll dragée croissant.')
+        self.james_rant.save()
+
+        # Create instance of a different User class
+        self.jane = User(username="ja-ne")
+        self.jane.save()
+
+        # Create a Reaction instance
+        self.new_reaction = Reaction(user_reacting=self.jane, rant=self.james_rant ,emoji_title ='smile')
+
+    def test_instance(self):
+        '''
+        Test case to check if self.new_reaction in an instance of Reaction class
+        '''
+        self.assertTrue( isinstance(self.new_reaction, Reaction) )
+
+    def test_get_rant_reactions(self):
+        '''
+        Test case to check if get rant reactions is getting reactions for a specific rant
+        '''
+        self.new_reaction.save()
+
+        # Create instance of the Rant class
+        self.jane_rant = Rant(author=self.jane.profile ,rant_title='Muffin', rant_content='I love muffin cookie lemon drops dragée. Caramels macaroon I love. Dragée jelly beans topping.')
+        self.jane_rant.save()
+
+        # Create instance of a different User class
+        self.john = User(username="jo-hn")
+        self.john.save()
+
+        # Reaction to self.james_rant
+        self.test_reaction = Reaction(user_reacting=self.john, rant=self.james_rant ,emoji_title ='smile')
+        self.test_reaction.save()
+
+        # Reaction to self.jane_rant
+        self.test_jane_reaction = Reaction(user_reacting=self.john, rant=self.jane_rant ,emoji_title ='smile')
+        self.test_jane_reaction.save()
+
+        # Reactions to self.james_rant
+        gotten_reactions = Reaction.get_rant_reactions(self.james_rant.id)
+
+        # All the reactions in the database
+        reactions = Reaction.objects.all()
+
+        self.assertTrue( len(gotten_reactions) != len(reactions))
+
 
 
 

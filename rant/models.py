@@ -80,7 +80,7 @@ class Rant(models.Model):
 
     class Meta:
         '''
-        Order travel plans with most recent at the top
+        Order rants with the most recent at the top
         '''
         ordering = ['-pub_date']
 
@@ -125,6 +125,43 @@ class Rant(models.Model):
         user_rants = Rant.objects.filter(author=profile_id)
 
         return user_rants
+
+class Reaction(models.Model):
+    '''
+    Class to define the reaction to a rant
+    '''
+    user_reacting = models.ForeignKey(User, on_delete=models.CASCADE)
+
+    rant = models.ForeignKey(Rant, on_delete=models.CASCADE)
+
+    emoji_title = models.CharField(max_length=255)
+
+    def __str__(self):
+        '''
+        Display for Reaction Object in Reaction table
+        '''
+        return self.user_reacting.username + '\'s reactions'
+
+    class Meta:
+        '''
+        Order reactions with the most recent at the top
+        '''
+        ordering = ['-id']
+
+    @classmethod
+    def get_rant_reactions(cls,rant_id):
+        '''
+        Function that gets reaction objects with the specified rant id
+
+        Args:
+            rant_id : the rant id
+
+        Returns
+            rant_reactions : List of Reaction objects with the specified rant id
+        '''
+        rant_reactions = Reaction.objects.filter(rant=rant_id)
+
+        return rant_reactions
 
 
 
