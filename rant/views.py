@@ -1,12 +1,12 @@
 from django.shortcuts import render, redirect
-from django.http import Http404
+from django.http import Http404, JsonResponse
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.contrib.auth import logout
 from django.db import transaction
 from django.contrib import messages
 from django.core.exceptions import ObjectDoesNotExist
-from .models import Profile, Rant
+from .models import Profile, Rant, Reaction
 from .forms import UserForm, ProfileForm, RantForm
 from emoji import Emoji
 
@@ -191,20 +191,40 @@ def single_rant(request, rant_id):
             continue
 
         # print(emoji_icons[0:4])
-        return render(request, 'all-rants/single-rant.html', {"title":title, "rant":single_rant, "emoji_names":emoji_names,"emoji_icons":emoji_icons[0:4]})
+        rant_reaction_emojis = []
+
+        rant_reactions = Reaction.get_rant_reactions(single_rant.id)
+
+        for rant_reaction in rant_reactions:
+
+            rant_reaction_icon = Emoji.replace(':'+rant_reaction.emoji_title+':')
+
+            rant_reaction_emojis.append(rant_reaction_icon)
+
+        # print(rant_reaction_emojis)
+
+        return render(request, 'all-rants/single-rant.html', {"title":title, "rant":single_rant, "emoji_names":emoji_names,"emoji_icons":emoji_icons[0:4],"rant_reaction_emojis":rant_reaction_emojis})
 
     except ObjectDoesNotExist:
 
         return redirect(index)
 
 @login_required
-def reaction(request, title):
+def reaction(request, title, rant_id):
     '''
     Function to save the rection for a rant in the database
     '''
-    print('<><><><><><><><><><><><><>')
-    print(title)
-    print('<><><><><><><><><><><><><>')
+    current_user = request.user
+
+    found_rant = Rant.get_single_rant(rant_id)
+
+    new_reaction = Reaction(user_reacting=current_user, rant=found_rant, emoji_title=title)
+
+    new_reaction.save()
+
+    data = {'success':'Your reaction has successfully been saved'}
+
+    return JsonResponse(data) 
 
 
 

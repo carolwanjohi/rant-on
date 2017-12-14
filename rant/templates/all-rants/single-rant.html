@@ -30,7 +30,7 @@
 
                 <div class="panel panel-default">
                     
-                    <div class="panel-body">
+                    <div class="panel-body" id="{{rant.id}}">
 
                         <h6 class="timeSince">
                             {{rant.pub_date|timesince}} ago
@@ -50,7 +50,17 @@
 
                 </div>
 
-                <div id="reactions"></div>
+                <div id="reactions">
+                    {% for rant_reaction_emoji in rant_reaction_emojis %}
+                        
+                        {%autoescape off %}
+
+                            {{rant_reaction_emoji|emoji_replace_html_entities}}
+
+                        {%endautoescape%}
+                    
+                    {%endfor%}
+                </div>
 
                 <div class="emojiContainer">
 

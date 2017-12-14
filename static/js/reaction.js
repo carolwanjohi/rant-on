@@ -17,6 +17,8 @@ function getCookie(name) {
 
 // Onclick function that takes the clicked emoji and display it below the rant
 $(document).on("click",".emoji", function(){
+    var rant_id = $('.panel-body').attr('id')
+    console.log(rant_id)
     
     csrftoken = getCookie('csrftoken')
     // console.log(csrftoken);
@@ -31,14 +33,17 @@ $(document).on("click",".emoji", function(){
     // console.log($(this).serialize());
 
 
-    var url = "/ajax/reaction/"+image_title+"/"
-    // console.log(url);
+    var url = "/ajax/reaction/"+image_title+"/"+rant_id+"/"
+    console.log(url);
     // console.log(attribute.serialize())
 
     $.ajax({
         'url':url,
         'type':'POST',
-        'data': image_title,
+        'data': {
+            "title":image_title,
+            "rant_id":rant_id
+        },
         'dataType': 'json',
         beforeSend: function(xhr){
             xhr.setRequestHeader('X-CSRFToken', getCookie('csrftoken'))
