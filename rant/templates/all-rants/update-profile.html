@@ -16,50 +16,72 @@
 
     <div class="container">
 
-        <div class="panel panel-default">
+        <div class="row">
             
-            <div class="panel-body">
+            <!-- Empty div -->
+            <div class="col-md-2 col-lg-2">
                 
-                <form action="" method="post" enctype="multipart/form-data">
+            </div>
 
-                    {% csrf_token %}
+            <!-- Form div -->
+            <div class="col-md-8 col-lg-8">
+                
+                <div class="panel panel-default">
+            
+                    <div class="panel-body">
+                        
+                        <form action="" method="post" enctype="multipart/form-data">
 
-                    <div class="form-group">
+                            {% csrf_token %}
 
-                        <h4>
-                            {{user_form.username.label}}
-                        </h4>
+                            <div class="form-group">
 
-                        {{user_form.username}}
+                                <h4 id="usernameHeader">
+                                    {{user_form.username.label}}
+                                </h4>
 
-                        <br>
+                                {{user_form.username}}
 
-                        {{user_form.username.errors}}
+                                <br>
+
+                                {{user_form.username.errors}}
+
+                            </div>
+
+                            <div class="form-group" id="profilePicture">
+                                <br>
+
+                                <h4 id="profilePictureHeader">
+                                    {{profile_form.profile_pic.label}}
+                                </h4>
+
+                                {{profile_form.profile_pic}}
+
+                                <br>
+
+                                {{profile_form.profile_pic.errors}}
+
+                            </div>
+
+                            <input type="submit" class="btn btn-primary btn-md" value="Update Profile">
+
+                        </form>
 
                     </div>
 
-                    <div class="form-group">
-                        <br>
-
-                        <h4>
-                            {{profile_form.profile_pic.label}}
-                        </h4>
-
-                        {{profile_form.profile_pic}}
-
-                        <br>
-
-                        {{profile_form.profile_pic.errors}}
-
-                    </div>
-
-                    <input type="submit" class="btn btn-primary btn-md" value="Update Profile">
-
-                </form>
+                </div>
 
             </div>
 
+            <!-- Empty div -->
+            <div class="col-md-2 col-lg-2">
+                
+            </div>
+
         </div>
+
+
+
 
     </div>
 

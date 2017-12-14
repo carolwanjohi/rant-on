@@ -1,5 +1,4 @@
 /*Style of the create rant template*/
-/*Style the login template*/
 @media only screen and (min-device-width: 0px) and (max-device-width: 376px)  { 
 
     input#id_rant_title, textarea#id_rant_content {

@@ -1,0 +1,115 @@
+@media only screen and (min-device-width: 0px) and (max-device-width: 376px)  { 
+
+    input#id_username, input#id_profile_pic {
+        border: 0.1em solid #000;
+    }
+
+    input#id_profile_pic {
+        margin-top: 7%;
+    }
+
+}
+
+@media only screen and (min-device-width: 377px) and (max-device-width: 426px)  { 
+
+    input#id_username, input#id_profile_pic {
+        border: 0.1em solid #000;
+    }
+
+    input#id_profile_pic {
+        margin-top: 4%;
+    }
+
+}
+
+@media only screen and (min-device-width: 427px) and (max-device-width: 770px)  { 
+
+    input#id_username, input#id_profile_pic {
+        border: 0.1em solid #000;
+    }
+
+    input#id_profile_pic {
+        margin-top: 4%;
+    }
+
+    div.form-group, input.btn.btn-primary.btn-md {
+        margin-left: 10%;
+    }
+
+}
+
+@media only screen and (min-device-width: 771px) and (max-device-width: 1025px)  { 
+
+    input#id_username, input#id_profile_pic {
+        border: 0.1em solid #000;
+    }
+
+    input#id_profile_pic {
+        margin-top: 2.5%;
+    }
+
+    div.form-group, input.btn.btn-primary.btn-md {
+        margin-left: 15%;
+    }
+
+}
+
+@media only screen and (min-device-width: 1026px) and (max-device-width: 1441px)  { 
+
+    input#id_username, input#id_profile_pic {
+        border: 0.1em solid #000;
+    }
+
+    input#id_profile_pic {
+        margin-top: 2.5%;
+    }
+
+    div.form-group, input.btn.btn-primary.btn-md {
+        margin-left: 15%;
+    }
+
+}
+
+@media only screen and (min-device-width: 1442px) { 
+
+    div.panel-body{
+        width: 55vw;
+        height: 70vh;
+    }
+
+    input#id_username, input#id_profile_pic {
+        border: 0.1em solid #000;
+    }
+
+    input#id_username {
+        font-size: 2em;
+    }
+
+    input#id_profile_pic {
+        margin-top: 2.5%;
+    }
+
+    div.form-group, input.btn.btn-primary.btn-md {
+        margin-left: 5%;
+        margin-top: 2.5%;
+    }
+
+    div.form-group#profilePicture {
+        font-size: 1.5em;
+    }
+
+    #usernameHeader {
+        font-size: 3em;
+    }
+
+    #profilePictureHeader {
+        font-size: 2.25em;
+    }
+
+    input.btn.btn-primary.btn-md {
+        font-size: 2.5em;
+    }
+
+}
+
+
