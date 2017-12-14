@@ -1,5 +1,9 @@
 /*Style for the single rant template*/
-@media only screen and (min-device-width: 1026px) and (max-device-width: 1441px)  { 
+@media only screen and (min-device-width: 0px) and (max-device-width: 376px)  { 
+
+    i.glyphicon.glyphicon-menu-left {
+        display: none;
+    }
 
     h6.timeSince {
         text-align: right;
@@ -10,7 +14,7 @@
         margin-left: auto;
         margin-right: auto;
         width: 100%;
-        height: 50vh;
+        height: 40vh;
         overflow-x: auto; 
     }
 
@@ -19,9 +23,183 @@
         margin-left: auto;
         margin-right: auto;
         width: 100%;
-        height: 50vh;
+        height: 40vh;
         overflow-x: auto; 
-        border: 1em solid #000; 
+        border: 0.15em solid #000; 
+    }
+
+}
+
+@media only screen and (min-device-width: 377px) and (max-device-width: 426px)  { 
+
+    i.glyphicon.glyphicon-menu-left {
+        display: none;
+    }
+
+    h6.timeSince {
+        text-align: right;
+    }
+
+    div#reactions {
+        background-color: #00FFFF;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        height: 40vh;
+        overflow-x: auto; 
+    }
+
+    div.emojiContainer {
+        background-color: #00FFFF;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        height: 40vh;
+        overflow-x: auto; 
+        border: 0.15em solid #000; 
+    }
+
+}
+
+@media only screen and (min-device-width: 427px) and (max-device-width: 770px)  { 
+
+    i.glyphicon.glyphicon-menu-left {
+        display: none;
+    }
+
+    h6.timeSince {
+        text-align: right;
+    }
+
+    div#reactions {
+        background-color: #00FFFF;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+        height: 30vh;
+        overflow-x: auto; 
+    }
+
+    div.emojiContainer {
+        background-color: #00FFFF;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+        height: 30vh;
+        overflow-x: auto; 
+        border: 0.15em solid #000; 
+    }
+
+}
+
+@media only screen and (min-device-width: 771px) and (max-device-width: 1025px)  { 
+
+    i.glyphicon.glyphicon-menu-left {
+        margin-top: 50%;
+        font-size: 8em;
+    }
+
+    h6.timeSince {
+        text-align: right;
+    }
+
+    div#reactions {
+        background-color: #00FFFF;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+        height: 30vh;
+        overflow-x: auto; 
+    }
+
+    div.emojiContainer {
+        background-color: #00FFFF;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+        height: 30vh;
+        overflow-x: auto; 
+        border: 0.15em solid #000; 
+    }
+
+}
+
+@media only screen and (min-device-width: 1026px) and (max-device-width: 1441px)  { 
+
+    i.glyphicon.glyphicon-menu-left {
+        margin-top: 35%;
+        font-size: 8em;
+    }
+
+    h6.timeSince {
+        text-align: right;
+    }
+
+    div#reactions {
+        background-color: #00FFFF;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+        height: 30vh;
+        overflow-x: auto; 
+    }
+
+    div.emojiContainer {
+        background-color: #00FFFF;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+        height: 30vh;
+        overflow-x: auto; 
+        border: 0.15em solid #000; 
+    }
+
+}
+
+@media only screen and (min-device-width: 1442px) { 
+
+    div.panel.panel-default {
+        width: 40vw;
+    }
+
+    i.glyphicon.glyphicon-menu-left {
+        margin-top: 30%;
+        font-size: 8em;
+    }
+
+    h6.timeSince {
+        text-align: right;
+        font-size: 2.5em;
+    }
+
+    h3.rantTitle {
+        font-size: 4.5em;
+    }
+
+    article.rantContent{
+        font-size: 1.75em;
+    }
+
+    h2.reactionTitle{
+        font-size: 3.5em;
+    }
+
+    div#reactions {
+        background-color: #00FFFF;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+        height: 30vh;
+        overflow-x: auto; 
+    }
+
+    div.emojiContainer {
+        background-color: #00FFFF;
+        margin-left: 18.5%;
+        width: 105%;
+        height: 30vh;
+        overflow-x: auto; 
+        border: 0.15em solid #000; 
     }
 
 }
