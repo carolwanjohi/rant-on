@@ -16,6 +16,10 @@ urlpatterns = [
 
     url(r'^other-rants/', views.other_rants, name="otherRants"),
 
+    url(r'^single/rant/(\d+)', views.single_rant, name="singleRant"),
+
+    url(r'^ajax/reaction/(?P<title>[-_\w.]+)', views.reaction, name="reaction")
+
 ]
 
 if settings.DEBUG:

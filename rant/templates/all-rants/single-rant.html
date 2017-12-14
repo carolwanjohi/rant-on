@@ -1,0 +1,92 @@
+{% extends 'all-rants/base.html' %}
+{% load staticfiles %}
+{% load emoji_tags %}
+
+<!-- Styles block -->
+{% block styles %}
+
+    {{block.super}}
+    <link rel="stylesheet" href="{% static 'css/single-rant.css'%}">
+
+{% endblock %}
+
+<!-- Content block -->
+{% block content %}
+
+    {{block.super}}
+
+    <div class="container">
+
+        <div class="row">
+            
+            <!-- Empty div -->
+            <div class="col-md-2 col-lg-2">
+                
+            </div>
+
+            <!-- Rant div -->
+
+            <div class="col-md-8 col-lg-8">
+
+                <div class="panel panel-default">
+                    
+                    <div class="panel-body">
+
+                        <h6 class="timeSince">
+                            {{rant.pub_date|timesince}} ago
+                        </h6>
+
+                        <h3 class="rantTitle">
+                            {{rant.rant_title}}
+                        </h3>
+
+                        <br>
+
+                        <article class="rantContent">
+                            {{rant.rant_content}}
+                        </article>
+
+                    </div>
+
+                </div>
+
+                <div id="reactions"></div>
+
+                <div class="emojiContainer">
+
+                    {%for emoji in emoji_icons%}
+                        
+                        {%autoescape off %}
+
+                            {{emoji|emoji_replace_html_entities}}
+
+                        {%endautoescape%}
+
+                    {%endfor%}  
+
+                </div>
+
+            </div>
+
+            <!-- Empty div -->
+            <div class="col-md-2 col-lg-2">
+                
+            </div>
+        </div>
+
+    </div>
+
+{% endblock %}
+
+
+<!-- Scripts block -->
+{% block scripts %}
+    {{block.super}}
+    <script type="text/javascript" src="{%static 'js/reaction.js'%}"></script>
+{% endblock %}
+
+
+
+
+
+

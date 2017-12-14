@@ -8,6 +8,7 @@ from django.contrib import messages
 from django.core.exceptions import ObjectDoesNotExist
 from .models import Profile, Rant
 from .forms import UserForm, ProfileForm, RantForm
+from emoji import Emoji
 
 # Create your views here.
 def index(request):
@@ -166,6 +167,45 @@ def other_rants(request):
     except ObjectDoesNotExist:
 
         return redirect(index)
+
+@login_required
+def single_rant(request, rant_id):
+    '''
+    View function to display a specific rant in page of its own
+    '''
+    try:
+
+        single_rant = Rant.get_single_rant(rant_id)
+
+        title = f'{single_rant.author.user.username}\'s Rant'
+
+        emoji_names = Emoji.keys()
+
+        emoji_icons = []
+
+        for emoji_name in emoji_names:
+
+            emoji_icon = Emoji.replace(':'+emoji_name+':')
+            emoji_icons.append(emoji_icon)
+
+            continue
+
+        # print(emoji_icons[0:4])
+        return render(request, 'all-rants/single-rant.html', {"title":title, "rant":single_rant, "emoji_names":emoji_names,"emoji_icons":emoji_icons[0:4]})
+
+    except ObjectDoesNotExist:
+
+        return redirect(index)
+
+@login_required
+def reaction(request, title):
+    '''
+    Function to save the rection for a rant in the database
+    '''
+    print('<><><><><><><><><><><><><>')
+    print(title)
+    print('<><><><><><><><><><><><><>')
+
 
 
 

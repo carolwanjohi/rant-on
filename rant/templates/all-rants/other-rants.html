@@ -24,22 +24,27 @@
                     <div class="panel panel-default">
 
                         <!-- Rant  -->
-                        <div class="panel-body">
-                            <h6 class="timeSince">
-                                {{rant.pub_date|timesince}} ago
-                            </h6>
 
-                            <h3 class="rantTitle">
-                                {{rant.rant_title}}
-                            </h3>
+                        <a href="{%url 'singleRant' rant.id%}">
 
-                            <br>
+                            <div class="panel-body">
+                                <h6 class="timeSince">
+                                    {{rant.pub_date|timesince}} ago
+                                </h6>
 
-                            <article class="rantContent">
-                                {{rant.rant_content|truncatewords:15}}
-                            </article>
+                                <h3 class="rantTitle">
+                                    {{rant.rant_title}}
+                                </h3>
 
-                        </div>
+                                <br>
+
+                                <article class="rantContent">
+                                    {{rant.rant_content|truncatewords:15}}
+                                </article>
+
+                            </div> 
+
+                        </a>
 
                     </div>
                     

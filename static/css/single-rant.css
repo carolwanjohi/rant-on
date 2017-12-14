@@ -1,0 +1,18 @@
+/*Style for the single rant template*/
+@media only screen and (min-device-width: 1026px) and (max-device-width: 1441px)  { 
+
+    h6.timeSince {
+        text-align: right;
+    }
+
+    div.emojiContainer{
+        background-color: #00FFFF;
+        margin-left: auto;
+        margin-right: auto;
+        width: 75%;
+        height: 50vh;
+        overflow-x: auto;  
+    }
+
+}
+
