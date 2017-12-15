@@ -1,74 +1,17 @@
 /*Style the navbar*/
-div.container {
-    margin-top: 0.75em;
-}
-
-.navbar{
-    background-color: #fff;
-    border-color: #fff;
-    border-bottom-color: #000;
-    height: 17vh;
-}
-
-.navbar-inverse .navbar-nav>li>a {
-    color: #000;
-}
-
-.navbar-inverse .navbar-nav>li>a:hover {
-    color: #000;
-}
-
-img.img-responsive.siteIcon {
-    margin-top: -7.5%; 
-    height: 19vh;
-}
-
-div.container-fluid > div.navbar-header > a.navbar-brand.siteName {
-    font-size: 3.5em;
-    color: #000;
-    padding-left: 0.75em;
-    margin-top: -1.5%;
-    margin-left: 1.5em;
-}
-
-ul.nav.navbar-nav.navbar-right {
-    margin-top: -0.25%;
-}
-
-.userIcon, .signOut {
-    font-size: 3em;
-    color: #000;
-}
-
-i.glyphicon.glyphicon-user {
-    margin-right: 2.75em;
-    font-size: 1.35em;
-    margin-top: -3%;
-}
-
-.signOut {
-    margin-left: 1em;
-}
-
-i.fa.fa-sign-out {
-    margin-right: 0.75em;
-    font-size: 1.35em;
-}
-
-a.navbar-brand.siteName {
-    color: #000;
-}
-
-a.navbar-brand.siteIcon:hover, a.navbar-brand.siteName:hover, a.signOut:hover {
-    color: #000;
-    text-decoration: none;
-}
-
-
 @media only screen and (min-device-width: 0px) and (max-device-width: 321px)  { 
 
-    .navbar {
+    .navbar{
+        background-color: #fff;
+        border-color: #fff;
+        border-bottom-color: #000;
+        height: 17vh;
         z-index: 9999;
+    }
+
+    .navbar-inverse .navbar-nav>li>a {
+        color: #000;
+        font-size: 3.25em;
     }
 
     .navbar-inverse .navbar-toggle {
@@ -78,25 +21,23 @@ a.navbar-brand.siteIcon:hover, a.navbar-brand.siteName:hover, a.signOut:hover {
 
     .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
         border-color: #fff;
-        margin-top: 5.5%;
+        margin-top: 6.75%;
         background-color: rgba(0,0,0,0.5);
+        width: 100vw;
+        margin-left: -12%;
     }
 
     img.img-responsive.siteIcon {
         margin-top: -7%; 
-        height: 14vh;
+        height: 15vh;
     }   
-
-    a.navbar-brand.siteName {
-        display: none;
-    }
 
     i.glyphicon.glyphicon-user {
         margin-top: 1%;
     }
 
     i.fa.fa-sign-out {
-        margin-left: -17%;
+        color: #000;
         margin-top: 0.25em;
     }
 
@@ -105,13 +46,16 @@ a.navbar-brand.siteIcon:hover, a.navbar-brand.siteName:hover, a.signOut:hover {
 @media only screen and (min-device-width: 322px) and (max-device-width: 378px)  { 
 
     .navbar {
+        background-color: #fff;
+        border-color: #fff;
+        border-bottom-color: #000;
+        height: 17vh;
         z-index: 9999;
     }
 
-    .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
-        border-color: #fff;
-        margin-top: 4.5%;
-        background-color: rgba(0,0,0,0.5);
+    .navbar-inverse .navbar-nav>li>a {
+        color: #000;
+        font-size: 3.25em;
     }
 
     .navbar-inverse .navbar-toggle {
@@ -119,21 +63,24 @@ a.navbar-brand.siteIcon:hover, a.navbar-brand.siteName:hover, a.signOut:hover {
         margin-top: 4.5%;
     }
 
+    .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+        border-color: #fff;
+        margin-top: 5.5%;
+        background-color: rgba(0,0,0,0.5);
+        width: 102vw;
+        margin-left: -12%;
+    }
+
     img.img-responsive.siteIcon {
         margin-top: -7%; 
         height: 16vh;
     }   
-
-    a.navbar-brand.siteName {
-        display: none;
-    }
 
     i.glyphicon.glyphicon-user {
         margin-top: 1%;
     }
 
     i.fa.fa-sign-out {
-        margin-left: -13%;
         margin-top: 0.25em;
     }
 
@@ -142,13 +89,16 @@ a.navbar-brand.siteIcon:hover, a.navbar-brand.siteName:hover, a.signOut:hover {
 @media only screen and (min-device-width: 379px) and (max-device-width: 426px)  { 
 
     .navbar {
+        background-color: #fff;
+        border-color: #fff;
+        border-bottom-color: #000;
+        height: 17vh;
         z-index: 9999;
     }
 
-    .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
-        border-color: #fff;
-        margin-top: 3.5%;
-        background-color: rgba(0,0,0,0.5);
+    .navbar-inverse .navbar-nav>li>a {
+        color: #000;
+        font-size: 3.25em;
     }
 
     .navbar-inverse .navbar-toggle {
@@ -156,46 +106,57 @@ a.navbar-brand.siteIcon:hover, a.navbar-brand.siteName:hover, a.signOut:hover {
         margin-top: 4.5%;
     }
 
+    .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+        border-color: #fff;
+        margin-top: 4%;
+        background-color: rgba(0,0,0,0.5);
+        width: 103vw;
+        margin-left: -12%;
+    }
+
     img.img-responsive.siteIcon {
         margin-top: -8%; 
         height: 18vh;
     }   
-
-    a.navbar-brand.siteName {
-        display: none;
-    }
 
     i.glyphicon.glyphicon-user {
         margin-top: 1%;
     }
 
     i.fa.fa-sign-out {
-        margin-left: -12%;
         margin-top: 0.25em;
     }
 
 }
 
 @media only screen and (min-device-width: 427px) and (max-device-width: 770px)  { 
+    div.container {
+        margin-top: 0.75em;
+    } 
+
+    .navbar {
+        background-color: #fff;
+        border-color: #fff;
+        border-bottom-color: #000;
+        height: 18vh;
+    }
+
+    .navbar-inverse .navbar-nav>li>a {
+        color: #000;
+        font-size: 3.25em;
+    }
 
     img.img-responsive.siteIcon {
         margin-top: -8%; 
         height: 18vh;
     }  
 
-    i.glyphicon.glyphicon-home {
-        margin-left: -1em;
-        margin-top: 0em;
-        font-size: 1em;
-    }
-
     ul.nav.navbar-nav.navbar-right {
-        margin-top: -0.5%;
+        margin-top: -1.5%;
     }
 
     i.glyphicon.glyphicon-user {
-        margin-right: 0.75em;
-        margin-top: 2%;
+        margin-right: 2.75em;
         font-size: 1.15em;
     }
 
@@ -208,25 +169,33 @@ a.navbar-brand.siteIcon:hover, a.navbar-brand.siteName:hover, a.signOut:hover {
 }
 
 @media only screen and (min-device-width: 771px) and (max-device-width: 1025px)  { 
+    div.container {
+        margin-top: 0.75em;
+    } 
+
+    .navbar {
+        background-color: #fff;
+        border-color: #fff;
+        border-bottom-color: #000;
+        height: 18vh;
+    }
+
+    .navbar-inverse .navbar-nav>li>a {
+        color: #000;
+        font-size: 3.25em;
+    }
 
     img.img-responsive.siteIcon {
         margin-top: -9%; 
         height: 18vh;
     }  
 
-    i.glyphicon.glyphicon-home {
-        margin-left: -1em;
-        margin-top: -0.1em;
-        font-size: 1em;
-    }
-
     ul.nav.navbar-nav.navbar-right {
-        margin-top: 0;
+        margin-top: -1%;
     }
 
     i.glyphicon.glyphicon-user {
-        margin-right: 1.75em;
-        margin-top: -4%;
+        margin-right: 4.75em;
         font-size: 1.15em;
     }
 
@@ -236,11 +205,86 @@ a.navbar-brand.siteIcon:hover, a.navbar-brand.siteName:hover, a.signOut:hover {
     }
 }
 
+@media only screen and (min-device-width: 1026px) and (max-device-width: 1441px)  { 
+
+    div.container {
+        margin-top: 0.75em;
+    }
+
+    .navbar{
+        background-color: #fff;
+        border-color: #fff;
+        border-bottom-color: #000;
+        height: 20vh;
+    }
+
+    .navbar-inverse .navbar-nav>li>a {
+        color: #000;
+    }
+
+    .navbar-inverse .navbar-nav>li>a:hover {
+        color: #000;
+    }
+
+    img.img-responsive.siteIcon {
+        margin-top: -7.5%; 
+        height: 19vh;
+    }
+
+    ul.nav.navbar-nav.navbar-right {
+        margin-top: -0.25%;
+    }
+
+    .userIcon, .signOut {
+        font-size: 3em;
+        color: #000;
+    }
+
+    i.glyphicon.glyphicon-user {
+        margin-right: 4.75em;
+        font-size: 1.35em;
+        margin-top: -3%;
+    }
+
+    .signOut {
+        margin-left: 1em;
+    }
+
+    i.fa.fa-sign-out {
+        margin-right: 0em;
+        font-size: 1.35em;
+        margin-top: 9%;
+    }
+
+
+    a.navbar-brand.siteIcon:hover, a.signOut:hover {
+        color: #000;
+        text-decoration: none;
+    }
+
+}
+
+
 
 @media only screen and (min-device-width: 1441px) { 
 
-    nav.navbar.navbar-inverse {
-        height: 20vh;
+    div.container {
+        margin-top: 0.75em;
+    }
+
+    .navbar{
+        background-color: #fff;
+        border-color: #fff;
+        border-bottom-color: #000;
+        height: 21vh;
+    }
+
+    .navbar-inverse .navbar-nav>li>a {
+        color: #000;
+    }
+
+    .navbar-inverse .navbar-nav>li>a:hover {
+        color: #000;
     }
 
     img.img-responsive.siteIcon {
@@ -248,23 +292,18 @@ a.navbar-brand.siteIcon:hover, a.navbar-brand.siteName:hover, a.signOut:hover {
         height: 21vh;
     }  
 
-    i.glyphicon.glyphicon-home {
-        margin-top: 0.30em;
-        font-size: 2em;
-    }
-
     ul.nav.navbar-nav.navbar-right {
         margin-top: 0;
     }
 
     i.glyphicon.glyphicon-user {
         margin-top: 2%;
-        font-size: 2.75em;
+        font-size: 8em;
     }
 
     i.fa.fa-sign-out {
-        margin-right: 0.75em;
-        font-size: 2.75em;
+        margin-left: 350%;
+        font-size: 8em;
         margin-top: 11%;
     }
 }

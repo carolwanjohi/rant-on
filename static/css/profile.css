@@ -4,7 +4,188 @@
     a.updateProfile, a.createRant {
         display: none;
     }
+
+    img.img-responsive.profilePicture {
+        border-radius: 100%;
+        height: 30vh;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    h1.username {
+        margin-top: 19%;
+    }
+
+    div.col-xs-6 > a {
+        color: #2F6690;
+        font-size: 1.35em;
+    }
+
+    div.col-xs-6 > a:hover {
+        color: #3A7CA5;
+        text-decoration: none;
+    }
+
+    div.panel.panel-default {
+        min-height: 35vh;
+    }
+
+    div.panel.panel-default > a {
+        color: #000;
+    }
+
+    div.panel.panel-default > a:hover {
+        color: #000;
+        text-decoration: none;
+    }
+
+    h6.timeSince {
+        text-align: right;
+    }
+
+    h3.rantTitle {
+        margin-top: -3%;
+    }
 }
+
+@media only screen and (min-device-width: 377px) and (max-device-width: 426px)  { 
+
+    a.updateProfile, a.createRant {
+        display: none;
+    }
+
+    img.img-responsive.profilePicture {
+        border-radius: 100%;
+        height: 30vh;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    h1.username {
+        margin-top: 19%;
+    }
+
+    div.col-xs-6 > a {
+        color: #2F6690;
+        font-size: 1.75em;
+    }
+
+    div.col-xs-6 > a:hover {
+        color: #3A7CA5;
+        text-decoration: none;
+    }
+
+    div.panel.panel-default {
+        min-height: 35vh;
+    }
+
+    div.panel.panel-default > a {
+        color: #000;
+    }
+
+    div.panel.panel-default > a:hover {
+        color: #000;
+        text-decoration: none;
+    }
+
+    h6.timeSince {
+        text-align: right;
+    }
+
+    h3.rantTitle {
+        margin-top: -3%;
+    }
+
+}
+
+@media only screen and (min-device-width: 427px) and (max-device-width: 770px)  { 
+
+    img.img-responsive.profilePicture {
+        border-radius: 100%;
+        height: 45vh;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    h1.username {
+        margin-top: 7%;
+    }
+
+    a.updateProfile, a.createRant {
+        font-size: 1.65em;
+    }
+
+    div.row.phoneUpdate, hr.phoneHr {
+        display: none;
+    }
+
+    div.panel.panel-default {
+        height: 50vh;
+    }
+
+    div.panel.panel-default > a, a.updateProfile, a.createRant {
+        color: #000;
+    }
+
+    div.panel.panel-default > a:hover, a.updateProfile:hover, a.createRant:hover {
+        color: #000;
+        text-decoration: none;
+    }
+
+    h6.timeSince {
+        text-align: right;
+    }
+
+    h3.rantTitle {
+        margin-top: -3%;
+    }
+
+}
+
+@media only screen and (min-device-width: 771px) and (max-device-width: 1025px)  { 
+
+    img.img-responsive.profilePicture {
+        border-radius: 100%;
+        height: 46vh;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    h1.username {
+        margin-top: 7%;
+    }
+
+    a.updateProfile, a.createRant {
+        font-size: 1.65em;
+    }
+
+    div.row.phoneUpdate, hr.phoneHr {
+        display: none;
+    }
+
+    div.panel.panel-default {
+        height: 50vh;
+    }
+
+    div.panel.panel-default > a, a.updateProfile, a.createRant {
+        color: #000;
+    }
+
+    div.panel.panel-default > a:hover, a.updateProfile:hover, a.createRant:hover {
+        color: #000;
+        text-decoration: none;
+    }
+
+    h6.timeSince {
+        text-align: right;
+    }
+
+    h3.rantTitle {
+        margin-top: -3%;
+    }
+    
+}
+
 
 @media only screen and (min-device-width: 1026px) and (max-device-width: 1441px)  { 
 
@@ -19,12 +200,25 @@
         margin-top: 8%;
     }
 
-    div.row.phoneUpdate {
+    a.updateProfile, a.createRant {
+        font-size: 1.65em;
+    }
+
+    div.row.phoneUpdate, hr.phoneHr {
         display: none;
     }
 
     div.panel.panel-default {
         height: 35vh;
+    }
+
+    div.panel.panel-default > a, a.updateProfile, a.createRant {
+        color: #000;
+    }
+
+    div.panel.panel-default > a:hover, a.updateProfile:hover, a.createRant:hover {
+        color: #000;
+        text-decoration: none;
     }
 
     h6.timeSince {
@@ -33,6 +227,57 @@
 
     h3.rantTitle {
         margin-top: -3%;
+    }
+
+}
+
+@media only screen and (min-device-width: 1442px) { 
+
+    img.img-responsive.profilePicture {
+        border-radius: 100%;
+        height: 45vh;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    h1.username {
+        margin-top: 10%;
+        font-size: 6em;
+    }
+
+    a.updateProfile, a.createRant {
+        font-size: 3.25em;
+    }
+
+    div.row.phoneUpdate, hr.phoneHr {
+        display: none;
+    }
+
+    div.panel.panel-default {
+        height: 38vh;
+    }
+
+    div.panel.panel-default > a, a.updateProfile, a.createRant {
+        color: #000;
+    }
+
+    div.panel.panel-default > a:hover, a.updateProfile:hover, a.createRant:hover {
+        color: #000;
+        text-decoration: none;
+    }
+
+    h6.timeSince {
+        text-align: right;
+        font-size: 1.5em;
+    }
+
+    h3.rantTitle {
+        margin-top: 4%;
+        font-size: 2.75em;
+    }
+
+    article.rantContent {
+        font-size: 1.75em;
     }
 
 }

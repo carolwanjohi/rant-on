@@ -1,8 +1,17 @@
 /*Style other rants template*/
-@media only screen and (min-device-width: 1026px) and (max-device-width: 1441px)  { 
+@media only screen and (min-device-width: 0px) and (max-device-width: 376px)  { 
 
     div.panel.panel-default {
-        height: 35vh;
+        min-height: 35vh;
+    }
+
+    div.panel.panel-default > a {
+        color: #000;
+    }
+
+    div.panel.panel-default > a:hover {
+        color: #000;
+        text-decoration: none;
     }
 
     h6.timeSince {
@@ -11,6 +20,137 @@
 
     h3.rantTitle {
         margin-top: -3%;
+    }
+}
+
+@media only screen and (min-device-width: 377px) and (max-device-width: 426px)  { 
+
+    div.panel.panel-default {
+        min-height: 35vh;
+    }
+
+    div.panel.panel-default > a {
+        color: #000;
+    }
+
+    div.panel.panel-default > a:hover {
+        color: #000;
+        text-decoration: none;
+    }
+
+    h6.timeSince {
+        text-align: right;
+    }
+
+    h3.rantTitle {
+        margin-top: -3%;
+    }
+
+}
+
+@media only screen and (min-device-width: 427px) and (max-device-width: 770px)  { 
+
+    div.panel.panel-default {
+        height: 50vh;
+    }
+
+    div.panel.panel-default > a {
+        color: #000;
+    }
+
+    div.panel.panel-default > a:hover {
+        color: #000;
+        text-decoration: none;
+    }
+
+    h6.timeSince {
+        text-align: right;
+    }
+
+    h3.rantTitle {
+        margin-top: -3%;
+    }
+
+}
+
+@media only screen and (min-device-width: 771px) and (max-device-width: 1025px)  { 
+
+    div.panel.panel-default {
+        height: 50vh;
+    }
+
+    div.panel.panel-default > a {
+        color: #000;
+    }
+
+    div.panel.panel-default > a:hover{
+        color: #000;
+        text-decoration: none;
+    }
+
+    h6.timeSince {
+        text-align: right;
+    }
+
+    h3.rantTitle {
+        margin-top: -3%;
+    }
+    
+}
+
+
+@media only screen and (min-device-width: 1026px) and (max-device-width: 1441px)  { 
+
+    div.panel.panel-default {
+        height: 35vh;
+    }
+
+    div.panel.panel-default > a {
+        color: #000;
+    }
+
+    div.panel.panel-default > a:hover {
+        color: #000;
+        text-decoration: none;
+    }
+
+    h6.timeSince {
+        text-align: right;
+    }
+
+    h3.rantTitle {
+        margin-top: -3%;
+    }
+
+}
+
+@media only screen and (min-device-width: 1442px) { 
+
+    div.panel.panel-default {
+        height: 38vh;
+    }
+
+    div.panel.panel-default > a {
+        color: #000;
+    }
+
+    div.panel.panel-default > a:hover {
+        color: #000;
+        text-decoration: none;
+    }
+
+    h6.timeSince {
+        text-align: right;
+        font-size: 1.5em;
+    }
+
+    h3.rantTitle {
+        margin-top: 4%;
+        font-size: 2.75em;
+    }
+
+    article.rantContent {
+        font-size: 1.75em;
     }
 
 }

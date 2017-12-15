@@ -24,43 +24,43 @@
 
             <div class="container-fluid">
 
-                <div class="navbar-header">
+                <div class="container">
+                        
+                   <div class="navbar-header">
 
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
 
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>                        
-                    </button>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>                        
+                        </button>
 
-                    <a href="{%url 'otherRants'%}" class="navbar-brand siteIcon">
-                        <img src="{% static 'images/rant3.png'%}" alt="Rant On Site Icon" class="img-responsive siteIcon">
-                    </a>
+                        <a href="{%url 'otherRants'%}" class="navbar-brand siteIcon">
+                            <img src="{% static 'images/rant3.png'%}" alt="Rant On Site Icon" class="img-responsive siteIcon">
+                        </a>
 
-                    <a href="{%url 'otherRants'%}" class="navbar-brand siteName">
-                        <i class="glyphicon glyphicon-home"></i>
-                    </a>
+                    </div>
 
-                </div>
+                    <div class="collapse navbar-collapse" id="myNavbar">
+                        
+                        <ul class="nav navbar-nav navbar-right">
 
-                <div class="collapse navbar-collapse" id="myNavbar">
+                            <li>
+                                <a href="{% url 'profile'%}" class="userIcon">
+                                    <i class="glyphicon glyphicon-user"></i>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="/account/logout" class="signOut">
+                                    <i class="fa fa-sign-out" aria-hidden="true"></i>
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </div>
                     
-                    <ul class="nav navbar-nav navbar-right">
-
-                        <li>
-                            <a href="{% url 'profile'%}" class="userIcon">
-                                <i class="glyphicon glyphicon-user"></i>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="/account/logout" class="signOut">
-                                <i class="fa fa-sign-out" aria-hidden="true"></i>
-                            </a>
-                        </li>
-
-                    </ul>
-
                 </div>
 
             </div>
