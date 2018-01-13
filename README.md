@@ -50,7 +50,7 @@ DEBUG=True
 psql
 CREATE DATABASE rant
 ```
-9. Change the database informatioin in `car/settings.py` 
+9. Change the database informatioin in `rant_on/settings.py` 
 ```
 DATABASES = {
     'default': {
@@ -65,7 +65,7 @@ DATABASES = {
 
 ## Known Bugs
 
-* react to other user's rants using emojis missing
+No known bugs
 
 ## Technologies Used
 - Python 3.6.2
