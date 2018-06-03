@@ -41,6 +41,8 @@ As a user I would like to:
 ```
 SECRET_KEY=<your secret key>
 DEBUG=True
+USER=<your postgresql username>
+PASSWORD=<your postgresql password>
 ```
 6. Enter your virtual environment `source virtual/bin/activate`
 7. Run `pip install -r requirements.txt` or `pip3 install -r requirements.txt`
@@ -50,22 +52,11 @@ DEBUG=True
 psql
 CREATE DATABASE rant
 ```
-9. Change the database informatioin in `car/settings.py` 
-```
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'rant',
-        'USER': *POSTGRES_USERNAME*,
-        'PASSWORD': *POSTGRES_USERNAME*,
-    }
-}
-``` 
-10. Run `./manage.py runserver` or `python3.6 manage.py runserver` to run the application
+9. Run `./manage.py runserver` or `python3.6 manage.py runserver` to run the application
 
 ## Known Bugs
 
-* react to other user's rants using emojis missing
+No known bugs
 
 ## Technologies Used
 - Python 3.6.2
