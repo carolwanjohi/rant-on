@@ -1,6 +1,6 @@
 # Rant On
 
-## By **[Carol Wanjohi](https://github.com/carolwanjohi)**
+#### By **[Carol Wanjohi](https://github.com/carolwanjohi)**
 
 ## Description
 [This](https://rant-on.herokuapp.com/) is a web application that prompts users to first log in using their Google credentials. After logging in the user is able to update their profile information, create a rant and react to other user's rants using emojis.
@@ -33,26 +33,33 @@ As a user I would like to:
 
 
 ### Installation Process
-1. Copy repolink
-2. Run `git clone REPO-URL` in your terminal
-3. Write `cd rant-on`
-4. Create a virtual environment with `virtualenv virtual` or try `python3.6 -m venv virtual`
-5. Create .env file `touch .env` and add the following:
+```
+git clone https://github.com/carolwanjohi/rant-on.git && cd cd rant-on
+virtualenv virtual or python3.6 -m venv virtual
+source virtual/bin/activate
+pip3 install -r requirements.txt
+```
+* Create .env file `touch .env` and add the following:
 ```
 SECRET_KEY=<your secret key>
 DEBUG=True
 USER=<your postgresql username>
 PASSWORD=<your postgresql password>
 ```
-6. Enter your virtual environment `source virtual/bin/activate`
-7. Run `pip install -r requirements.txt` or `pip3 install -r requirements.txt`
-8. Create Postgres Database
-
+* Create Postgres Database
 ```
 psql
 CREATE DATABASE rant
 ```
-9. Run `./manage.py runserver` or `python3.6 manage.py runserver` to run the application
+### Running the application
+```
+./manage.py runserver or python3.6 manage.py runserver
+```
+
+### Running the tests
+```
+./manage.py test or python3.6 manage.py test
+```
 
 ## Known Bugs
 
