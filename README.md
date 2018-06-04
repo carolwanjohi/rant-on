@@ -49,7 +49,7 @@ PASSWORD=<your postgresql password>
 * Create Postgres Database
 ```
 psql
-CREATE DATABASE rant
+CREATE DATABASE rant;
 ```
 ### Running the application
 ```
